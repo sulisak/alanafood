@@ -558,7 +558,7 @@ app.controller('Index', function($scope, $http, $location) {
 
             $scope.selectpage = page;
             $scope.selectthispage = page;
-            console.log(data.list, 'Salereportshift...');
+            console.log(data.list, 'check Salereportshift...');
         });
 
     };

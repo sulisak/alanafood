@@ -58,32 +58,16 @@ $query = $this->db->query('SELECT
 
 $encode_data = json_encode($query->result(),JSON_UNESCAPED_UNICODE );
 
-
 $num_rows = $querynum->num_rows();
 
 $pageall = ceil($num_rows/$perpage);
-
-
-
 
 $json = '{"list": '.$encode_data.',
 "numall": '.$num_rows.',"perpage": '.$perpage.', "pageall": '.$pageall.'}';
 
 return $json;
 
-
-        }
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
