@@ -6991,13 +6991,16 @@ if($_SESSION['owner_vat_status']=='0' || $_SESSION['owner_vat_status']=='1'){
 
 
         if (isNaN($scope.shift_money_end) == true) {
-            toastr.warning('กรุณากรอกตัวเลข');
+            toastr.warning('ກະລຸນາໃສ່ໂຕເລກ');
         } else {
             $http.post("Salepic/Confirmcloseshiftnow", {
                 shift_money_end: $scope.shift_money_end
             }).success(function(response) {
+                // console.log(shift_id, 'check shift id...');
 
                 window.location.href = '<?php echo $base_url;?>/sale/salepic';
+
+
             });
         }
 
